@@ -1,0 +1,5 @@
+com\google\cloud\samples\java\HelloWorldApplication.class
+com\google\cloud\samples\java\HelloWorldConfiguration.class
+com\google\cloud\samples\java\api\Saying.class
+com\google\cloud\samples\java\health\TemplateHealthCheck.class
+com\google\cloud\samples\java\resources\HelloWorldResource.class
