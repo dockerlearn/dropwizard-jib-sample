@@ -6,6 +6,7 @@
 
     <groupId>com.google.cloud.samples.java</groupId>
     <artifactId>dropwizrd-jib-demo</artifactId>
+    <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -20,28 +21,26 @@
     </dependencies>
 
     <build>
-        <plugins>
-            <plugin>
-                <groupId>com.google.cloud.tools</groupId>
-                <artifactId>jib-maven-plugin</artifactId>
-                <version>0.1.8-SNAPSHOT</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>buildDocker</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <to>
-                        <image>
-                            yomama
-                        </image>
-                    </to>
-                </configuration>
-            </plugin>
-        </plugins>
+       <finalName>${project.artifactId}</finalName>
+      <plugins>
+      <plugin>
+        <groupId>org.mortbay.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
     </build>
+   <dependencies>
 
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.servlet.jsp</groupId>
+      <artifactId>jsp-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
 </project>
