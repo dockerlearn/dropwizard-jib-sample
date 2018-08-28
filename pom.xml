@@ -39,6 +39,9 @@
                             gcr.io/coral-atom-205708/jib-sample:${BUILD_NUMBER}
                         </image>
                     </to>
+                    <container>
+                        <mainClass>com.google.cloud.samples.java.HelloWorldApplication</mainClass>
+                    </container>
                 </configuration>
             </plugin>
         </plugins>
